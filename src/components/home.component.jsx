@@ -83,11 +83,19 @@ class Home extends React.Component {
                                 </th>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Nationality
+                                </th>
+                                <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                     Gender
                                 </th>
                                 <th
                                     class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                     Ip Address
+                                </th>
+                                <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Actions
                                 </th>
                             </tr>
                         </thead>
@@ -96,16 +104,16 @@ class Home extends React.Component {
                             {
                                 employees.length === 0 ?
                                     <tr>
-                                        <td class='justify-around font-medium text-red-500 pl-1'>no employee data</td>
+                                        <td class='justify-around font-medium text-red-300 pl-1'>no employee data</td>
                                     </tr> :
 
-                                    currentEmployees.map(({ first_name, last_name, email, phone, gender, ip_address, _id }) => (
+                                    currentEmployees.map(({ first_name, last_name, email, phone, gender, nat, picture,  ip_address, _id }) => (
                                         <tr>
                                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                 <div class="flex items-center">
                                                     <div class="flex-shrink-0 w-10 h-10">
                                                         <img class="w-full h-full rounded-full"
-                                                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                                                            src={picture}
                                                             alt="" />
                                                     </div>
                                                     <div class="ml-3">
@@ -129,12 +137,21 @@ class Home extends React.Component {
                                                 </p>
                                             </td>
                                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <p class="text-gray-900 whitespace-no-wrap">
+                                                    {nat}
+                                                </p>
+                                            </td>
+                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                 <span
                                                     class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                                     <span aria-hidden
                                                         class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
                                                     <span class="relative">{ip_address}</span>
                                                 </span>
+                                            </td>
+                                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <a href="#/" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+                                                <a href="#/" class="text-blue-400 hover:text-blue-600 underline pl-6">Remove</a>
                                             </td>
                                         </tr>
 

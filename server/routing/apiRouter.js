@@ -52,11 +52,14 @@ router.get('/employees/:id', async(request, response) => {
 
 router.post('/employees', async(request, response) => {
     let newEmployee = {
-        first_name: request.body.first_name,
-        last_name: request.body.last_name,
+        first: request.body.first,
+        last: request.body.last,
+        dob: request.body.dob,
         email: request.body.email,
         gender: request.body.gender,
         phone: request.body.phone,
+        picture: request.body.picture,
+        nat: request.body.nat,
         ip_address: request.body.ip_address,
 
     };
@@ -83,11 +86,14 @@ router.post('/employees', async(request, response) => {
 router.put('/employees/:id', async(request, response) => {
     let employeeId = request.params.id;
     let updatedEmployee = {
-        first_name: request.body.first_name,
-        last_name: request.body.last_name,
+        first: request.body.first,
+        last: request.body.last,
+        dob: request.body.dob,
         email: request.body.email,
-        phone: request.body.phone,
         gender: request.body.gender,
+        phone: request.body.phone,
+        picture: request.body.picture,
+        nat: request.body.nat,
         ip_address: request.body.ip_address,
     };
 

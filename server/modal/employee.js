@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 
 let EmployeeSchema = new mongoose.Schema({
-    first_name: {
+    first_name:{
+        type:String,
+        required: true
+    },
+    last_name:{
         type: String,
         required: true
     },
-    last_name: {
+    dob: {
         type: String,
         required: true
     },
@@ -22,13 +26,21 @@ let EmployeeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    ip_address: {
+    nat: {
         type: String,
         required: true
     },
     date: {
         type: Date,
         default: Date.now()
+    },
+    picture: {
+        type: String,
+        require: true
+    },
+    ip_address: {
+        type: String,
+        require: true
     }
 });
 
