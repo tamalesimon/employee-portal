@@ -52,8 +52,8 @@ router.get('/employees/:id', async(request, response) => {
 
 router.post('/employees', async(request, response) => {
     let newEmployee = {
-        first: request.body.first,
-        last: request.body.last,
+        first_name: request.body.first_name,
+        last_name: request.body.last_name,
         dob: request.body.dob,
         email: request.body.email,
         gender: request.body.gender,
