@@ -116,7 +116,7 @@ class Home extends React.Component {
                                         <td class='justify-around font-medium text-red-300 pl-1'>no employee data</td>
                                     </tr> :
 
-                                    currentEmployees.map(({ first_name, last_name, email, phone, gender, nat, picture,  ip_address, _id }) => (
+                                    currentEmployees.map(({ first_name, last_name, email, phone, gender, nationality, picture,  ip_address, _id }) => (
                                         <tr>
                                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                 <div class="flex items-center">
@@ -147,7 +147,7 @@ class Home extends React.Component {
                                             </td>
                                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                 <p class="text-gray-900 whitespace-no-wrap">
-                                                    {nat}
+                                                    {nationality}
                                                 </p>
                                             </td>
                                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">

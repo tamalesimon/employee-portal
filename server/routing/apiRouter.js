@@ -59,7 +59,7 @@ router.post('/employees', async(request, response) => {
         gender: request.body.gender,
         phone: request.body.phone,
         picture: request.body.picture,
-        nat: request.body.nat,
+        nationality: request.body.nationality,
         ip_address: request.body.ip_address,
 
     };

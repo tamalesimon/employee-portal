@@ -26,7 +26,7 @@ let EmployeeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    nat: {
+    nationality: {
         type: String,
         required: true
     },
